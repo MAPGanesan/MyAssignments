@@ -3,7 +3,7 @@ import { parse } from "csv-parse/sync"
 import fs from 'fs'
 import path from 'path'
 
-let JSObj: any = parse(fs.readFileSync('Utils/loginData.csv', 'utf-8'), { columns: true, skip_empty_lines: true })
+let JSObj: any[] = parse(fs.readFileSync('Utils/loginData.csv', 'utf-8'), { columns: true, skip_empty_lines: true })
 
 test.describe.serial('Run tests in serial mode', async () => {
 
